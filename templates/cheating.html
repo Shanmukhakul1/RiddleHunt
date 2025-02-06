@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Cheating!!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #ff3333;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        #lottie-animation {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="lottie-animation"></div>
+    <h1>Ahahan! No Cheating!!</h1>
+    <p>If you are bad, I'm your DAD! 😉</p>
+    <p>But don't worry... you can still go back and play fair!</p>
+    <button onclick="window.location.href='/'">Go Back</button>
+</div>
+
+<script>
+    // Lottie animation for "No Cheating"
+    var animation = lottie.loadAnimation({
+        container: document.getElementById('lottie-animation'), // ID of the animation container
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'https://assets5.lottiefiles.com/packages/lf20_x62chJ.json' // Lottie animation JSON URL
+    });
+
+    const utterance = new SpeechSynthesisUtterance("HEY CHEATER, I'm watching you, Go back and play fair!");
+    utterance.lang = 'en-US'; // Set language
+    window.speechSynthesis.speak(utterance); // Speak the message
+</script>
+
+</body>
+</html>
